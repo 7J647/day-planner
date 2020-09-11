@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
     var container = $(".container");
-    var rows = $(".rows");
 
     var businessHours = ["9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM"]
 
@@ -9,9 +8,29 @@ $(document).ready(function(){
             // tested the forLoop
             // console.log(businessHours[i]);
             var hourRow = $("<div>");
-            hourRow.text(businessHours[i]);
-            rows.append(hourRow);
-            console.log(hourRow);
+            container.append(hourRow);
+
+            var hour = $("<div>");
+            hour.text(businessHours[i]);
+            hour.attr("style", "float:left");
+            hour.attr("class", "col-sm-1");
+            hourRow.append(hour);
+
+            var schedule = $("<input>");
+            schedule.attr("style", "float:left");
+            schedule.attr("style", "width:100%");
+            schedule.attr("class", "col-sm-10");
+            hourRow.append(schedule);
+
+            var save = $("<button>");
+            //testing to see if text goes in there, 
+            //this will come out later
+            save.text("save");
+            hour.attr("style", "float:left");
+            hour.attr("class", "col-sm-1");
+            hourRow.append(save);
+
+
 
 
 
