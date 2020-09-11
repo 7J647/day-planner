@@ -11,16 +11,23 @@ $(document).ready(function(){
             
             var hourRow = $("<div>");
             container.append(hourRow);
+            hourRow.attr("style", "height:80px");
 
-            var hour = $("<div>");
+            var hour = $("<button>");
             hour.text(businessHours[i]);
             hour.attr("style", "float:left");
             hour.attr("class", "col-sm-1");
+            hour.attr("style", "height:80px");
             hourRow.append(hour);
+
+            //if hour is < (before) the current hour, color is xxxx
+            //else if hour is the current hour, color is yyyy
+            //else color is zzzz
 
             var schedule = $("<input>");
             schedule.attr("style", "float:left");
             schedule.attr("style", "width:100%");
+            schedule.attr("style", "height:80px");
             schedule.attr("class", "col-sm-10");
             hourRow.append(schedule);
 
@@ -28,8 +35,9 @@ $(document).ready(function(){
             
             //this will come out later
             save.text("save");
-            hour.attr("style", "float:left");
-            hour.attr("class", "col-sm-1");
+            save.attr("style", "float:left");
+            save.attr("style", "height:80px");
+            save.attr("class", "col-sm-1");
             hourRow.append(save);
 
 
