@@ -57,7 +57,7 @@ $(document).ready(function(){
             hourRow.append(schedule);
 
             //populating the input from local storage if anything is in there
-            var existingTasks = localStorage.getItem(hourNumber);
+            // var existingTasks = localStorage.getItem(hourNumber);
             // schedule.val(existingTasks);
 
             var saveButton = $("<button>");
@@ -72,16 +72,20 @@ $(document).ready(function(){
 //add another to do as necessary in the same hours and that persists as well.
 
 saveButton.on("click", function(){ 
-    // console.log("click happened");
+    console.log("click happened");
+
+    var schedule =$(this).siblings("input");
+    var hourNumber =$(this).siblings("button").text();
+    localStorage.setItem(hourNumber, schedule.val());
 
     //so that the save button knows to save the input right next to it
-    var schedule =$(this).siblings("input");
+    // var schedule =$(this).siblings("input");
     
-    // so that the save button knows to pair the input with the hour
-    var hourNumber =$(this).siblings("button").text(); 
+    // // so that the save button knows to pair the input with the hour
+    // var hourNumber =$(this).siblings("button").text(); 
 
-    //setting the input into local storage, will pull out by key existingTasks
-    localStorage.setItem(hourNumber, schedule.val(existingTasks));
+    // //setting the input into local storage, will pull out by key existingTasks
+    // localStorage.setItem(hourNumber, schedule.val(existingTasks));
 
     
 
