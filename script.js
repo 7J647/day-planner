@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
+    var currentDay = $("#currentDay");
+    currentDay.text(moment().format("MMMM DD, YYYY"));
+       
     var container = $(".container");
 
     var businessHours = ["9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM"]
 
         for (var i=0; i < businessHours.length; i++) {
-            // tested the forLoop
-            // console.log(businessHours[i]);
+            
             var hourRow = $("<div>");
             container.append(hourRow);
 
@@ -23,7 +25,7 @@ $(document).ready(function(){
             hourRow.append(schedule);
 
             var save = $("<button>");
-            //testing to see if text goes in there, 
+            
             //this will come out later
             save.text("save");
             hour.attr("style", "float:left");
