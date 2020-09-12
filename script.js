@@ -10,7 +10,7 @@ $(document).ready(function(){
     var container = $(".container");
 
     //build array for a for Loop to iterate over and create rows
-    var businessHours = [{businessTime: "9AM", militaryTime:9}, {businessTime: "10AM", militaryTime:10}, {businessTime: "11AM", militaryTime:11}, {businessTime: "12PM", militaryTime:12}, {businessTime: "1PM", militaryTime: 13}, {businessTime: "2PM", militaryTime:14}, {businessTime: "3PM", militaryTime:15}, {businessTime: "4PM", militaryTime:16}, {businessTime: "5PM", militaryTime:17} ,{businessTime: "6PM", militaryTime:18} ,{businessTime: "7PM", militaryTime:19},{businessTime: "8PM", militaryTime:20},{businessTime: "9PM", militaryTime:21},{businessTime: "10PM", militaryTime:22},{businessTime: "11PM", militaryTime:23}]
+    var businessHours = [{businessTime: "9AM", militaryTime:9}, {businessTime: "10AM", militaryTime:10}, {businessTime: "11AM", militaryTime:11}, {businessTime: "12PM", militaryTime:12}, {businessTime: "1PM", militaryTime: 13}, {businessTime: "2PM", militaryTime:14}, {businessTime: "3PM", militaryTime:15}, {businessTime: "4PM", militaryTime:16}]
 
         for (var i=0; i < businessHours.length; i++) {
             
@@ -120,8 +120,13 @@ $(document).ready(function(){
 
     localStorage.setItem(hourNumber, schedule.val());
 
-    //LAST DITCH EFFORT TO TRY SOMETHING SIMPLE AND SEE IT WORKED
+   
+    //LAST DITCH EFFORTS TO TRY SOMETHING SIMPLE AND SEE IT WORKED
     // schedule.getItem(hourNumber);
+    // localStorage.setItem("hourNumber", schedule.val());
+
+    // localStorage.getItem("hourNumber");   
+
 
 })
        
