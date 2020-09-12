@@ -41,6 +41,8 @@ $(document).ready(function(){
             //else color is zzzz
 
             var schedule = $("<input>");
+
+
             schedule.attr("style", "float:left; width:100%; height:80px;");
             schedule.attr("class", "col-sm-10");
             hourRow.append(schedule);
@@ -78,7 +80,7 @@ $(document).ready(function(){
             
             //this will come out later
             saveButton.text("save");
-            saveButton.attr("style", "float:left; height:80px; background-color: #06AED5; color:white");
+            saveButton.attr("style", "float:left; height:80px; background-color: #06AED5; color:white; border-left: 1px solid black; border-top-right-radius: 15px; border-bottom-right-radius: 15px;");
             saveButton.attr("class", "col-sm-1");
             hourRow.append(saveButton);
 
@@ -100,6 +102,20 @@ $(document).ready(function(){
     var hourNumber =$(this).siblings("div").text();
     
     localStorage.setItem(hourNumber, schedule.val());
+   
+
+
+// var HighScore = localStorage.getItem('highScore');
+// if (HighScore == null || HighScore == "null") {
+//   HighScore = 0;
+// }
+
+// if (user.points > HighScore) {
+//   highScore = parseInt(HighScore);
+// }
+// return highScore 
+
+    // localStorage.setItem($(this).parent())
     
     // var schedule = JSON.parse(localStorage.getItem(hourNumber);
    
