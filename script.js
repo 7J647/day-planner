@@ -21,7 +21,7 @@ $(document).ready(function(){
 
             var hourNumber = $("<div>");
             hourNumber.text(businessHours[i].businessTime);
-            hourNumber.attr("style", "float:left; height:40px");
+            hourNumber.attr("style", "float:left; height:40px; border-top: 1px solid black");
             hourNumber.attr("class", "col-sm-1");
             hourRow.append(hourNumber);
 
@@ -41,27 +41,27 @@ $(document).ready(function(){
             //else color is zzzz
 
             var schedule = $("<input>");
-            schedule.attr("style", "float:left; width:100%; height:80px; background-color:orange");
+            schedule.attr("style", "float:left; width:100%; height:80px;");
             schedule.attr("class", "col-sm-10");
             hourRow.append(schedule);
 
             if (hourNumber < actualHour) {
-               schedule.attr("style", "float:left; width:100%; height:80px; background-color:purple");
+               schedule.attr("style", "float:left; width:100%; height:80px; background-color:#d3d3d3; color:white");
 
             // color of the main schedule input field equals the before color
 
             }
             else if (hourNumber === actualHour) {
-                schedule.attr("style", "float:left; width:100%; height:80px; background-color:green");
+                schedule.attr("style", "float:left; width:100%; height:80px; background-color:#ff6961; color:white");
             // color of the main schedule input field equals the current hour color
             // schedule.attr("background-color:#77dd77; color:white");
             
             }
             
-            else if (hourNumber > actualHour) {
+            else  {
                 // color of the main schedule input field is greater than the after hour color
                 // schedule.attr("background-color:#77dd77; color:white");
-                schedule.attr("style", "float:left; width:100%; height:80px; background-color:yellow");
+                schedule.attr("style", "float:left; width:100%; height:80px; background-color:#77dd77; color:white");
 
             }
             
@@ -74,12 +74,20 @@ $(document).ready(function(){
             // schedule = storage.getItem(hourNumber);
            
             var saveButton = $("<button>");
+
             
             //this will come out later
             saveButton.text("save");
-            saveButton.attr("style", "float:left; height:80px");
+            saveButton.attr("style", "float:left; height:80px; background-color: #06AED5; color:white");
             saveButton.attr("class", "col-sm-1");
             hourRow.append(saveButton);
+
+                var saveIcon = $("<img>");
+                saveIcon.attr("src", "https://www.iconfinder.com/data/icons/apple-classic/100/Apple_classic_10Icon_5px_grid-04-512.png");
+                saveIcon.attr("alt", "save");
+                saveIcon.attr("style", "height:30px; width:30px");
+                saveButton.append(saveIcon);
+
 
 //input box text "to do" goes into local storage and then it persists.
 //add another to do as necessary in the same hours and that persists as well.
