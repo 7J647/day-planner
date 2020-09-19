@@ -60,3 +60,6 @@ SOFTWARE.
 ###### Contributing
 
 For other developers who would like to improve the work done on this project or offer suggestions, please feel free to do so and Slack me with your comments.
+
+###### Contact
+<jeffreyedwardflynn@gmail.com>
