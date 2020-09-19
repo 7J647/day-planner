@@ -19,7 +19,9 @@ I was able to achieve putting the hour and corresponding to-do into local storag
 
 The URL for this website is https://7j647.github.io/day-planner/
 
-<img src ="./ScreenShot.jpg" alt= "Day planner app screen shot">
+<img src ="./NineAM.png" alt= "Day planner app screen shot">
+<img src ="./OnePM.png" alt= "Day planner app screen shot">
+<img src ="./FivePM.png" alt= "Day planner app screen shot">
 
 ### Credits
 
